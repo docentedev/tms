@@ -56,8 +56,8 @@ export class CommonController {
     type: DriverListResponseStatus,
     isArray: true,
   })
-  @Get('vehicle-statuses')
-  listVehicleStatuses(): DriverListResponseStatus[] {
+  @Get('vehicle-status')
+  listVehicleStatus(): DriverListResponseStatus[] {
     return [
       {
         id: 'string',
