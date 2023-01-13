@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
 import { ApiOkResponse, ApiQuery, ApiTags } from '@nestjs/swagger';
+import { vehicleListResponseData } from 'src/data/mock';
 import {
+  VehicleListResponse,
   VehiclePaginationResponse,
   VehicleUpdaStatusBody,
   VehicleUpdaStatusResponse,
@@ -96,6 +98,26 @@ export class VehiclesController {
     const res: VehicleUpdaStatusResponse = {
       success: true,
     };
+    return res;
+  }
+
+  @ApiQuery({
+    name: 'query',
+    required: false,
+    type: String,
+  })
+  @ApiOkResponse({
+    type: VehicleListResponse,
+    isArray: true,
+  })
+  @Get('allowed')
+  allowed(): VehicleListResponse[] {
+    const res: VehicleListResponse[] = [
+      vehicleListResponseData,
+      vehicleListResponseData,
+      vehicleListResponseData,
+      vehicleListResponseData,
+    ];
     return res;
   }
 }

@@ -70,7 +70,7 @@ class DriverVehicle {
   user: string;
 }
 
-class VehicleListResponse {
+export class VehicleListResponse {
   @ApiProperty()
   id: string;
   @ApiProperty()
