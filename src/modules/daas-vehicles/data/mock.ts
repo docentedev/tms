@@ -1,4 +1,4 @@
-import { VehicleListResponse } from 'src/types';
+import { VehicleListResponse } from '../types';
 
 export const vehicleListResponseData: VehicleListResponse = {
   id: 'string',

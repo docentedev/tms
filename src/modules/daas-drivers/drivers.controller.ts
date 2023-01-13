@@ -7,7 +7,7 @@ import {
   DriverUpdaStatusResponse,
   DriverUpdateBody,
   DriverUpdateBodyResponse,
-} from 'src/types';
+} from './types';
 
 @ApiTags('drivers')
 @Controller('tms/drivers')

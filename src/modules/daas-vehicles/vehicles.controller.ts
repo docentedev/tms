@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
 import { ApiOkResponse, ApiQuery, ApiTags } from '@nestjs/swagger';
-import { vehicleListResponseData } from 'src/data/mock';
+import { vehicleListResponseData } from 'src/modules/daas-vehicles/data/mock';
 import {
   VehicleListResponse,
   VehiclePaginationResponse,
@@ -9,7 +9,7 @@ import {
   VehicleUpdaStatusResponse,
   VehicleUpdateBody,
   VehicleUpdateResponse,
-} from '../types';
+} from './types';
 
 @ApiTags('vehicles')
 @Controller('tms/vehicles')

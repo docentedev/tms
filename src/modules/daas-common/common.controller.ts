@@ -1,11 +1,10 @@
 import { Controller, Get } from '@nestjs/common';
 import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
+import { PropulsionType, VehicleType } from 'src/modules/daas-vehicles/types';
 import {
   DriverListResponseGender,
   DriverListResponseStatus,
-  PropulsionType,
-  VehicleType,
-} from 'src/types';
+} from '../daas-drivers/types';
 
 @ApiTags('common')
 @Controller('tms/common')
