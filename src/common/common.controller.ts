@@ -35,12 +35,32 @@ export class CommonController {
   listVehicleTypes(): VehicleType[] {
     return [
       {
-        id: 'string',
+        id: 'CARD',
+        name: 'CARD',
+      },
+      {
+        id: 'BICYCLE',
+        name: 'BICYCLE',
+      },
+      {
+        id: 'TRUCK',
         name: 'TRUCK',
       },
       {
-        id: 'string',
-        name: 'CAR',
+        id: 'ELECTRIC_CAR',
+        name: 'ELECTRIC_CAR',
+      },
+      {
+        id: 'PICK_UP',
+        name: 'PICK_UP',
+      },
+      {
+        id: 'MOTORCYCLE',
+        name: 'MOTORCYCLE',
+      },
+      {
+        id: 'OTHER',
+        name: 'OTHER',
       },
     ];
   }
@@ -50,7 +70,20 @@ export class CommonController {
   })
   @Get('propulsion-types')
   listPropulsionTypes(): PropulsionType[] {
-    return [];
+    return [
+      {
+        id: 'OIL',
+        name: 'OIL',
+      },
+      {
+        id: 'ELECTRIC',
+        name: 'ELECTRIC',
+      },
+      {
+        id: 'GAS',
+        name: 'GAS',
+      },
+    ];
   }
   @ApiOkResponse({
     type: DriverListResponseStatus,
@@ -60,12 +93,20 @@ export class CommonController {
   listVehicleStatus(): DriverListResponseStatus[] {
     return [
       {
-        id: 'string',
-        name: 'STATUS_A',
+        id: 'ALLOWED',
+        name: 'ALLOWED',
       },
       {
-        id: 'string',
-        name: 'STATUS_B',
+        id: 'IN_ROUTE',
+        name: 'IN_ROUTE',
+      },
+      {
+        id: 'NOT_ALLOWED',
+        name: 'NOT_ALLOWED',
+      },
+      {
+        id: 'NOT_ALLOWED',
+        name: 'WITHOUT_DRIVER',
       },
     ];
   }
